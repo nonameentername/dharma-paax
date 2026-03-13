@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build:css": "sass --load-path=themes/gallery/assets/css themes/gallery/assets/css/main.scss static/css/theme-prebuilt.css --no-source-map --style=compressed",
+    "build": "npm run build:css && hugo",
+    "dev": "npm run build:css && hugo server -D"
+  },
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}

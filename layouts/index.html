@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ with index $images 0 }}
+    {{ $hero := .Filter (slice images.AutoOrient (images.Process "fit 2200x2200")) }}
+    <section class="featured">
+      <figure class="landing-cover">
+        <img src="{{ $hero.RelPermalink }}" width="{{ $hero.Width }}" height="{{ $hero.Height }}" alt="{{ $.Title }}" />
+      </figure>
+    </section>
+  {{ end }}
+  <hgroup>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.Description }}
+      <p>{{ . | markdownify }}</p>
+    {{ end }}
+  </hgroup>
+  {{ with .Content }}
+    <section class="prose">
+      {{ . }}
+    </section>
+  {{ else }}
+    {{ partial "title.html" . }}
+  {{ end }}
+{{ end }}

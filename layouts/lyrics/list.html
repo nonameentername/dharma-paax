@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  <section class="prose lyrics-index">
+    {{ with .Content }}
+      {{ . }}
+    {{ end }}
+    <ul>
+      {{ range .Pages.ByTitle }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

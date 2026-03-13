@@ -1,0 +1,70 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Dharma Paax"
+theme = "gallery"
+enableRobotsTXT = true
+timeZone = "America/Chicago"
+timeout = "120s"
+copyright = "© Dharma Paax"
+
+[params]
+  defaultTheme = "dark"
+  description = "A contemplative photo journal built with Hugo and hugo-theme-gallery."
+  title = "Dharma Paax"
+  [params.author]
+    name = "Dharma Paax"
+    email = "hello@example.org"
+  [params.socialIcons]
+    spotify = "https://open.spotify.com/artist/4eGibImaduYae4giuulA5D?si=LoyhEc_DRuSEYBuQYs7cRA"
+    youtubeMusic = "https://music.youtube.com/channel/UCdJxxFgvKHBpByKeG5dDONw?si=1ylpAF9yHQo7NjY9"
+    appleMusic = "https://music.apple.com/us/artist/dharma-paax/1713468974"
+    instagram = "https://www.instagram.com/dharmapaax/"
+    youtube = "https://www.youtube.com/@DHARMAPAAX"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 80
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[menu]
+  [[menu.main]]
+    name = "Dharma Paax"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Singles"
+    pageRef = "/singles"
+    weight = 2
+  [[menu.main]]
+    name = "Lyrics"
+    pageRef = "/lyrics"
+    weight = 3
+  [[menu.main]]
+    name = "Photos"
+    pageRef = "/photos"
+    weight = 4
+  [[menu.main]]
+    name = "Videos"
+    pageRef = "/videos"
+    weight = 5
+  [[menu.footer]]
+    name = "About"
+    pageRef = "/about"
+    weight = 1
+
+[services]
+  [services.rss]
+    limit = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
