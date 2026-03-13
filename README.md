@@ -19,3 +19,9 @@ Build the production site:
 ```bash
 npm run build
 ```
+
+Serve webpage locally:
+
+```
+hugo server --logLevel debug --disableFastRender -p 1313
+```

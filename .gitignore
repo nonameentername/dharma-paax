@@ -6,3 +6,4 @@ resources/
 .cache/
 .DS_Store
 Thumbs.db
+static/css/theme-prebuilt.css
