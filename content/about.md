@@ -2,4 +2,8 @@
 title: About
 ---
 
-Dharma Paax is a Hugo site using the `nicokaiser/hugo-theme-gallery` theme. This page is regular site content, while albums live in page bundles with image resources.
+We are a San Antonio, Texas band with a powerful message of respect, understanding, and love for one another and mother nature.
+
+Our mission is to spread compassion and consciousness, inspiring positive change and always being part of the solution.
+
+Together, through music and action, we aim to create a better world. Join us on this transformative journey!
